@@ -1,0 +1,12 @@
+name: "cmake-clang-ninja-build"
+description: "A GitHub Action to build projects using CMake, Clang and Ninja"
+inputs:
+  dir:
+    description: "Directory containing top level CMakeLists.txt"
+    required: true
+    default: "src"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.dir }}
