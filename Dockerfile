@@ -12,6 +12,7 @@ RUN apt-get update -qq && \
     gnupg \
     lsb-release \
     wget \
+    pkg-config \
     software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
@@ -29,7 +30,7 @@ RUN wget https://cmake.org/files/v3.20/cmake-3.20.0-linux-x86_64.tar.gz && \
 
 RUN git clone https://github.com/microsoft/vcpkg && \
     ./vcpkg/bootstrap-vcpkg.sh && \
-    /vcpkg/vcpkg install catch2
+    /vcpkg/vcpkg install catch2 spdlog
 
 COPY entrypoint.sh /entrypoint.sh
 
