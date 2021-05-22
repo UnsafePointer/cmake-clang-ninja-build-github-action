@@ -7,6 +7,6 @@ inputs:
     default: "src"
 runs:
   using: "docker"
-  image: "docker://ghcr.io/unsafepointer/cmake-clang-ninja-build-github-action:f92360"
+  image: "docker://ghcr.io/unsafepointer/cmake-clang-ninja-build-github-action:144977"
   args:
     - ${{ inputs.dir }}
