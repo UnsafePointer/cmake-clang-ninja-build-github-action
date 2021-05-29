@@ -11,7 +11,7 @@ A GitHub Action to build projects using CMake, Clang and Ninja.
 ## Example usage
 
 ```yaml
-uses: UnsafePointer/cmake-clang-ninja-build-github-action@v1.3
+uses: UnsafePointer/cmake-clang-ninja-build-github-action@v1.4
 with:
   dir: "src"
 ```
