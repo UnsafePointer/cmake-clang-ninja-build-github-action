@@ -30,7 +30,7 @@ RUN wget https://cmake.org/files/v3.20/cmake-3.20.0-linux-x86_64.tar.gz && \
 
 RUN git clone https://github.com/microsoft/vcpkg && \
     ./vcpkg/bootstrap-vcpkg.sh && \
-    /vcpkg/vcpkg install catch2 spdlog nlohmann-json
+    /vcpkg/vcpkg install catch2 spdlog nlohmann-json sdl2 glad[gl-api-46] imgui[opengl3-glad-binding,sdl2-binding]
 
 COPY entrypoint.sh /entrypoint.sh
 
